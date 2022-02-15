@@ -6,6 +6,7 @@
 
 int add1;
 int add2;
+int add3;
 int main()
 {
 	//array that we will work with
