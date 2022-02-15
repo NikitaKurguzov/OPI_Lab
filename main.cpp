@@ -5,6 +5,7 @@
 #include "Functions.h"
 
 int add1;
+int add2;
 int main()
 {
 	//array that we will work with
