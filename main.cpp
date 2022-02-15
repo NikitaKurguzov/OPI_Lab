@@ -4,6 +4,7 @@
 #include <iostream>
 #include "Functions.h"
 
+int add1;
 int main()
 {
 	//array that we will work with
