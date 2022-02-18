@@ -1,13 +1,10 @@
-//this code does these things:
-//it runs
-//it exists
+/**this code does these things:
+*it runs
+*it exists
+*/
 #include <iostream>
 #include "Functions.h"
 
-int add1;
-int add2;
-int add3;
-int add4;
 int main()
 {
 	//array that we will work with
