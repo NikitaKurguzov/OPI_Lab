@@ -2,6 +2,9 @@
 
 /**
 * Finds smallest number and it's id in given array
+* @param arr Array to search in
+* @param lenght Array lenght
+* @param ind Index of the smallest item in the array
 */
 int FindSmallest(int*& arr, int lenght, int& ind);
 
