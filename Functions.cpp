@@ -1,6 +1,5 @@
 #include <math.h>
 
-//ww
 int FindSmallest(int *&arr,int lenght,int &ind)
 {
 	int min = abs(arr[0]);
