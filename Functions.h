@@ -6,6 +6,7 @@ int FindSmallest(int*& arr, int lenght, int& ind);
 /**Do this*/
 int dothis(){}
 
+/**do that*/
 int dothat(){}
 
 int orthat(){}
