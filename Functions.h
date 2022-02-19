@@ -11,14 +11,14 @@ int FindSmallest(int*& arr, int lenght, int& ind);
 /**
 * Does this
 */
-int do_this(){}
+int do_this(){return 0;}
 
 /**
 *do that
 */
-int do_that(){}
+int do_that(){return 1;}
 
 /**
 * maybe do that
 */
-int or_that(){}
+int or_that(){return 2;}
