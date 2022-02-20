@@ -21,4 +21,4 @@ int do_that(){return 1;}
 /**
 * maybe do that
 */
-int or_that(){return 2;}
+int or_that(){return ;}
