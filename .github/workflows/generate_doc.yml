@@ -1,0 +1,26 @@
+name: Make Doxygen Docs
+on: [push]
+jobs:
+  Explore-GitHub-Actions:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Make Documentation
+        uses: mattnotmitt/doxygen-action@v1.9.2
+        with: 
+          doxyfile-path: './Doxyfile'
+      - name: upload result
+        uses: actions/upload-artifact@v2
+        with:
+          path: docs
+          name: Doxygen Documentation
+      - name: Pushes to another repository
+        uses: cpina/github-action-push-to-another-repository@main
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+        with:
+          source-directory: 'docs'
+          destination-github-username: 'NikitaKurguzov'
+          destination-repository-name: 'opi_lab_docs'
+          user-email: 2020100197@pnu.edu.ru
+          target-branch: main
