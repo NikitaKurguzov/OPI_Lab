@@ -11,8 +11,8 @@ jobs:
           with:
             files: "README.md"
         - name: Has File?
-          if: steps.check_files.outputs.files_exists == 'true'
+          if: steps.check_files.outputs.files_exists != 'true'
           run: echo No File!
         - name: Has File?
-          if: steps.check_files.outputs.files_exists != 'true'
+          if: steps.check_files.outputs.files_exists == 'true'
           run: echo We have file!
