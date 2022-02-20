@@ -2,6 +2,8 @@ name: GitHub Actions Demo
 on: [push]
 jobs:
     Test-For-File:
+        runs-on: windows-latest
+        steps:
         - uses: actions/checkout@v2
         - name: Check file existance
           id: check_files
