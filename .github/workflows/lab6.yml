@@ -1,18 +1,17 @@
-name: GitHub Actions Demo
+name: Windows Build Visual Studio
 on: [push]
 jobs:
     Test-For-File:
         runs-on: windows-latest
         steps:
-        - uses: actions/checkout@v2
-        - name: Check file existance
-          id: check_files
-          uses: andstor/file-existence-action@v1
+        - name: upload
+          uses: actions/checkout@v2
+        - name: setup-msbuild
+          uses: microsoft/setup-msbuild@v1.1
+        - name: Compile Release
+          run:  msbuild /property:Configuration=Release
+        - name: upload result
+          uses: actions/upload-artifact@v2
           with:
-            files: "README.md"
-        - name: Has File?
-          if: steps.check_files.outputs.files_exists != 'true'
-          run: echo No File!
-        - name: Has File?
-          if: steps.check_files.outputs.files_exists == 'true'
-          run: echo We have file!
+            path: Release
+            name: Windows Release Build
