@@ -16,5 +16,3 @@ jobs:
         - name: Has File?
           if: steps.check_files.outputs.files_exists != 'true'
           run: echo We have file!
-        - name: Compile release
-        
